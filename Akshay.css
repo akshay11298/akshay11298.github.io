@@ -1,0 +1,79 @@
+ul li a{
+    float: right;
+    text-wrap: normal;
+    text-align: center;
+    font-family: "Book Antiqua";
+    font-size: 1.1em;
+    color: #f6f6f6;
+}
+nav div.col-sm-3{
+    font-size: 1.75em;
+    font-family: "Book Antiqua";
+    color: #ffffff;
+    padding-top: 5px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;
+}
+nav {
+    background-color: orangered;
+    height: auto;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e;
+    background-color: #fff;
+}
+div.jumbotron{
+    font-family: "Sail Away";
+    background-color: orangered;
+    color: #f6f6f6;
+    height: auto;
+}
+.me{
+    font-size: medium;
+}
+.container-fluid{
+    padding: 60px 50px;
+}
+.img-rounded,.img-circle{
+    height: 200px;
+    width: 200px;
+}
+.me h3{
+    color: #818181;
+}
+.carousel-inner img{
+    width: 100%;
+    margin: auto;
+}
+.carousel-indicators li{
+    border-color: orangered ;
+}
+.carousel-indicators li.active{
+    background-color: orangered;
+}
+.slideanim{
+    visibility: hidden;
+}
+.slide{
+    animation-name: slide;
+    animation-duration: 1s;
+    visibility: visible;
+}
+@keyframes slide {
+    0%{
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.carousel-caption{
+    font-size: small;
+    border-color: orangered;
+}
