@@ -1,5 +1,5 @@
-ul li a{
-    float: right;
+ul li a,
+nav div a{
     text-wrap: normal;
     text-align: center;
     font-family: "Book Antiqua";
@@ -7,6 +7,12 @@ ul li a{
     color: #f6f6f6;
     width: auto;
     height: auto;
+}
+nav{
+    display: inline-block;
+}
+ul li a{
+    float: right;
 }
 nav div.col-sm-3{
     font-size: 1.75em;
@@ -27,6 +33,10 @@ nav {
     color: #f4511e;
     background-color: #fff;
 }
+nav div a:hover{
+    text-decoration: none;
+    color: inherit;
+}
 div.jumbotron{
     font-family: "Barrio";
     background-color: orangered;
@@ -43,8 +53,13 @@ div.jumbotron{
     height: 200px;
     width: 200px;
 }
-.me h3{
+.me h3,
+.school h3,
+.work h3{
     color: #818181;
+}
+.school{
+    font-size: 15px;
 }
 .carousel-inner img{
     width: 100%;
@@ -80,4 +95,24 @@ div.jumbotron{
 }
 .indie{
     font-family: "Indie Flower",bold;
+}
+.panel-heading{
+    color: #f6f6f6 !important;
+    background-color: orangered !important;
+}
+.panel-heading h3{
+    color: #f6f6f6 !important;
+}
+.panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+.panel{
+    border-color: orangered;
+    border-width: 1px;
+}
+.panel-body .img-responsive{
+    margin: auto;
+    display: block;
+    height: 200px !important;
+    width: 200px !important;
 }

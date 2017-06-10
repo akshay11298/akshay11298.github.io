@@ -12,14 +12,14 @@
     <script type="text/javascript" src="JS/Akshay.js"></script>
     <link rel="stylesheet" type="text/css" href="CSS/Akshay.css">
 </head>
-<body>
+<body id="top" data-spy="scroll" data-target=".navbar" data-offset="60">
 <nav class="navbar navbar-fixed-top">
-    <div class="col-sm-3">Hello Earthlings! </div>
+    <div class="col-sm-3"><a href="#top">Hello Earthlings!</a> </div>
     <ul class="nav navbar-nav navbar-right">
         <li><a href="#about">About me!</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#">Contact me !!</a></li>
+        <li><a href="#contact">Contact me !!</a></li>
     </ul>
 </nav>
 <div class="jumbotron text-center">
@@ -144,7 +144,7 @@
                     <img src="img/MUA.png" class="img-responsive">
                 </div>
                 <div class="panel-footer">
-                    It is a pure Java application which uses JavaFX for GUI designing and Mail API. It allows user to create an account on the applciation to access their existing email accounts. This allows them to
+                    It is a pure Java application which uses JavaFX for GUI designing and Mail API. Database is stored in MySQL local server. It allows user to create an account on the application to access their existing email accounts. This allows them to
                     send and receive emails through the application. The application is in the building stage but is capable of creating an account and, sending and receiving emails. It also has
                     several security features for password protection. The upcoming features are a multiple email ID access and multiple folder access.
                 </div>
@@ -161,10 +161,34 @@
                 </div>
                 <div class="panel-footer">
                     It is a Java Application which implements JavaFX fundamentals for the designing. This application is a hostel management system which grants warden the access to the database of
-                    the students. The warden can allot a room to a student and can also remove his/her entry. The warden can update the details of the student.<br>
+                    the students. The warden can allot a room to a student and can also remove his/her entry. The warden can update the details of the student. The database of students has all of
+                    the student record including their fee, name, address and room number. Database is stored in MySQL local server. The room number has an automatic allocation and the warden does not have to be concerned with that.
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div id="contact" class="container-fluid">
+    <div class="text-center">
+        <h2 class="indie">You can reach me at ...</h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            Phone number:
+        </div>
+        <div class="col-sm-3">
+            +91 9971110289
+        </div>
+        <div class="col-sm-6"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            Email ID:
+        </div>
+        <div class="col-sm-5">
+            akshay.avinash@gmail.com
+        </div>
+        <div class="col-sm-4"></div>
     </div>
 </div>
 </body>
