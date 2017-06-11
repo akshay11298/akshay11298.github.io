@@ -2,7 +2,7 @@
  * Created by aksha on 06-06-2
  **/
 $(document).ready(function(){
-    $("nav",".jumbotron","#about").hide().fadeIn(1000);
+    $('body').removeClass('fade-out');
     $(".navbar a").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
