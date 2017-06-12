@@ -2,7 +2,6 @@
  * Created by aksha on 06-06-2
  **/
 $(document).ready(function(){
-    $('body').removeClass('fade-out');
     $(".navbar a").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();

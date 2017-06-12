@@ -135,10 +135,6 @@ body{
     margin: 10px;
     transition: 1s opacity;
 }
-body.fade-out{
-    opacity:0;
-    transition: none;
-}
 html{
     background-color: orangered;
 }
@@ -150,7 +146,7 @@ html{
     background-size: cover;
     opacity: 0.4;
 }
-@media screen and (min-width:768px){
+@media screen and (max-width:768px){
     #mem{
         display:none !important;
     }
