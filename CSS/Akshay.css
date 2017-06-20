@@ -134,6 +134,7 @@ body{
     opacity:1;
     margin: 10px;
     transition: 1s opacity;
+    margin-top: 0px !important;
 }
 html{
     background-color: orangered;
@@ -150,4 +151,8 @@ html{
     #mem{
         display:none !important;
     }
+}
+button.btn.btn-primary a{
+    color: #f6f6f6;
+    text-decoration: none;
 }
