@@ -20,11 +20,11 @@ nav div div.col-sm-3{
     color: #ffffff;
     padding-top: 5px;
 }
-nav ul{
+/* nav ul{
     list-style: none;
     display: flex;
     justify-content: flex-end;
-}
+} */
 nav {
     background-color: orangered;
     height: auto;
