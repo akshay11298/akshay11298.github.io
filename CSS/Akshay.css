@@ -1,6 +1,6 @@
 ul li a,
 nav div div a{
-    text-wrap: normal;
+/*     text-wrap: normal; */
     text-align: center;
     font-family: "Book Antiqua";
     font-size: 1.1em;
@@ -8,11 +8,11 @@ nav div div a{
     width: auto;
     height: auto;
 }
-nav{
+/* nav{
      display: inline-block; 
-}
-#navbars ul li a{
-    float: right !important;
+} */
+/* #navbars ul li a{
+    float: right !important; */
 }
 nav div div.col-sm-3{
     font-size: 1.75em;
