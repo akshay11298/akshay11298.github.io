@@ -138,6 +138,7 @@ body{
     margin: 10px;
     transition: 1s opacity;
     margin-top: 0px !important;
+    background-color:orangered;
 }
 html{
     background-color: orangered;
@@ -145,6 +146,7 @@ html{
 #mem{
     width: 100%;
     height: 100px;
+    background-color:white !important;
 }
 #mem div div img{
     background-size: cover;
@@ -161,5 +163,8 @@ button.btn.btn-primary a{
 }
 .icon-bar{
     color:white !important;
+    background-color:white !important;
+}
+#about,#education,#contact{
     background-color:white !important;
 }
