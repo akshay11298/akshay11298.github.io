@@ -9,7 +9,7 @@ nav div a{
     height: auto;
 }
 nav{
-    display: inline-block;
+/*     display: inline-block; */
 }
 ul li a{
     float: right;
@@ -86,7 +86,7 @@ div.jumbotron{
         transform: translateY(70%);
     }
     100%{
-        opacity: 1;
+         opacity: 1;
         transform: translateY(0%);
     }
 }
@@ -157,5 +157,5 @@ button.btn.btn-primary a{
     text-decoration: none;
 }
 .icon-bar{
-    color:white;
+    color:white !important;
 }
