@@ -25,6 +25,9 @@ nav div div.col-sm-3{
     display: flex;
     justify-content: flex-end;
 } */
+nav.navbar {
+    background-color:orangered !important;
+}
 nav {
     background-color: orangered;
     height: auto;
