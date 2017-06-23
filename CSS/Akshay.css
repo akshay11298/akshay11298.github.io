@@ -135,6 +135,7 @@ body{
     margin: 10px;
     transition: 1s opacity;
     margin-top: 0px !important;
+    background-color:orangered;
 }
 html{
     background-color: orangered;
