@@ -26,7 +26,7 @@ nav div div.col-sm-3{
     justify-content: flex-end;
 } */
 nav.navbar {
-    background-color:orangered !important;
+    background-color:orangered;
 }
 nav {
     background-color: orangered;
