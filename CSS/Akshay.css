@@ -1,5 +1,5 @@
 ul li a,
-nav div a{
+nav div div a{
     text-wrap: normal;
     text-align: center;
     font-family: "Book Antiqua";
@@ -11,8 +11,8 @@ nav div a{
 nav{
      display: inline-block; 
 }
-ul li a{
-    float: right;
+#navbars ul li a{
+    float: right !important;
 }
 nav div.col-sm-3{
     font-size: 1.75em;
