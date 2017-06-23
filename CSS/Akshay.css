@@ -14,7 +14,7 @@ nav{
 #navbars ul li a{
     float: right !important;
 }
-nav div.col-sm-3{
+nav div div.col-sm-3{
     font-size: 1.75em;
     font-family: "Book Antiqua";
     color: #ffffff;
