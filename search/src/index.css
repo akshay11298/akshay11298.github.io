@@ -1,0 +1,93 @@
+body{
+    background-image: url("../img/download.jpg");
+    height: 100%;
+    overflow-x: hidden;
+    /*background-position: center;*/
+    background-size: cover;
+}
+@-webkit-keyframes bounceInDown {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0); }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0); }
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0); }
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0); }
+    to {
+        -webkit-transform: none;
+        transform: none; } }
+
+@keyframes bounceInDown {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0); }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0); }
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0); }
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0); }
+    to {
+        -webkit-transform: none;
+        transform: none; } }
+
+.bounceInDown {
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+}
+
+#login{
+    padding: 10pt;
+}
+#form .panel{
+    /*margin-top: 10%;*/
+    position: absolute;
+    /*top:50%;*/
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px!important;
+    border-radius: 5px;
+    border-width: 5px;
+    filter:none;
+}
+.panel-heading .col-sm-10 h2{
+    transform: translateX(50%);
+}
+.fluid-container div{
+    padding: 10pt;
+}
+
+#search-key{
+    margin-left: 10px !important;
+    width:100%;
+    font-size: large;
+    background-color: whitesmoke;
+}
+#search-btn{
+    background-color:whitesmoke !important;
+ }
+#main1.col-sm-4.col-xs-12.panel.panel-default{
+    margin: 10px;
+    padding: 10px;
+    display: inline;
+    height: 92px !important;
+    width: 250px;
+}
