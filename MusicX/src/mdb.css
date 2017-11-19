@@ -1259,7 +1259,7 @@
 .hoverable {
   -webkit-transition: box-shadow 0.55s;
   transition: box-shadow 0.55s;
-  box-shadow: 0; }
+  box-shadow: none; }
   .hoverable:hover {
     -webkit-transition: box-shadow 0.45s;
     transition: box-shadow 0.45s;
