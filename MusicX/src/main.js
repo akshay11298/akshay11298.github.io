@@ -4,6 +4,7 @@ var request;
 var age;
 var obj;
 
+
 function isEmpt(str){
     return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
 }
@@ -53,7 +54,7 @@ btn.addEventListener('click',function () {
    }
 });
 
-document.getElementById("search")
+document.getElementById("search-key")
     .addEventListener("keyup", function(event) {
         event.preventDefault();
         if (event.keyCode === 13) {
@@ -72,7 +73,7 @@ function useData(data) {
                     "<div class='panel-body'>" +
                         "<div class='row'>" +
                             "<div class='col-sm-3'>" +
-                                "<img id="+i+ " src=" + obj.results[i].artworkUrl100 + " class='img-responsive' width='60px' height='60px' data-toggle='modal' data-target='#myModal' onclick='playit(obj.results[i])'>" +
+                                "<img id="+i+ " src=" + obj.results[i].artworkUrl100 + " class='img-responsive' width='60px' height='60px' data-target='#myModal'>" +
                             "</div>" +
                             "<div class='col-sm-9'>" +
                                 "<h6>"+obj.results[i].trackName+"</h6>"+
@@ -90,7 +91,7 @@ function useData(data) {
                 "<div class='panel-body'>" +
                 "<div class='row'>" +
                 "<div class='col-sm-3'>" +
-                "<img src=" + obj.results[i].artworkUrl100 + " class='img-responsive' width='60px' height='60px'>" +
+                "<img src=" + obj.results[i].artworkUrl100 + " class='img-responsive' width='60px' height='60px' data-target='#myModal'>" +
                 "</div>" +
                 "<div class='col-sm-9'>" +
                 "<h6>"+obj.results[i].trackCensoredName+"</h6>"+
@@ -103,17 +104,22 @@ function useData(data) {
         }
     }
     document.getElementById('main1').innerHTML+=s;
+    prop();
 }
-var buttons = document.getElementsByTagName("img");
-var buttonsCount = buttons.length;
-for (var i = 0; i <= buttonsCount; i += 1) {
-    buttons[i].onclick = function(e) {
-        var s="<audio controls>" +
-            "<source src="+obj.results[this.id].previewUrl+"/>"+"</audio>";
-        document.getElementById('mod').innerHTML=s;
-        alert(this.id);
-    };
+
+function prop() {
+    var buttons = document.getElementsByTagName("img");
+    var buttonsCount = buttons.length;
+    for (var i = 0; i <= buttonsCount; i += 1) {
+        buttons[i].onclick = function(e) {
+            console.log(e.target.id);
+            BootstrapDialog.show({
+               message: 'Hi'
+            });
+        };
+    }
 }
-function playit(data) {
-    console.log(data.trackName);
+
+function playit(event) {
+
 }
