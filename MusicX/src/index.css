@@ -5,6 +5,15 @@ body{
     /*background-position: center;*/
     background-size: cover;
 }
+#myModal{
+    display: none;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 0 25px 5px grey;
+    width: 500px;
+    height: 100px;
+}
+
 @-webkit-keyframes bounceInDown {
     from, 60%, 75%, 90%, to {
         -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);

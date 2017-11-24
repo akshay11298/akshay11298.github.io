@@ -4,7 +4,6 @@ var request;
 var age;
 var obj;
 
-
 function isEmpt(str){
     return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
 }
@@ -107,14 +106,28 @@ function useData(data) {
     prop();
 }
 
+
 function prop() {
-    var buttons = document.getElementsByTagName("img");
+    var buttons = document.getElementsByClassName('panel-body');
     var buttonsCount = buttons.length;
     for (var i = 0; i <= buttonsCount; i += 1) {
         buttons[i].onclick = function(e) {
             console.log(e.target.id);
-            BootstrapDialog.show({
-               message: 'Hi'
+            var s="<div class='text-center'>" +
+                        "<div class='text-right'>" +
+                        "<button>X</button>" +
+                        "</div>" +
+                        "<audio controls src="+obj.results[e.target.id].previewUrl+">" +
+                "</audio>" +
+                "</div>";
+            document.getElementById('myModal').innerHTML=s;
+            $('.text-right button').on('click',function (e) {
+                $('#myModal').bPopup().close();
+            });
+            $('#myModal').bPopup({
+                transition:'slideDown',
+                modalClose:true,
+                opacity:0.6
             });
         };
     }
