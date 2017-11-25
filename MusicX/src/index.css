@@ -4,6 +4,7 @@ body{
     overflow-x: hidden;
     /*background-position: center;*/
     background-size: cover;
+    background-repeat: no-repeat;
 }
 #myModal{
     display: none;
@@ -89,6 +90,15 @@ body{
     display: inline;
     height: 92px !important;
     width: 250px;
+}
+.panel-body{
+    word-break: break-all;
+    word-wrap: break-word;
+    padding-top: 5px !important;
+}
+
+h6{
+    margin: 2px !important;
 }
 #form{
     z-index: 10;
