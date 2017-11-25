@@ -2,14 +2,34 @@ var btn=document.getElementById('search-btn');
 var url="";
 var request;
 var age;
-var obj;
+var obj,search;
+var words=[];
+$(document).ready(function (e) {
+   getWords();
+   console.log(words);
+    writeWords(["abc","def"]);
+});
+function getWords() {
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", "a.txt", false);
+    rawFile.onreadystatechange = function () {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status === 0) {
+                var allText = rawFile.responseText;
+                words=allText.split(" ");
+            }
+        }
+    };
+    rawFile.send(null);
+}
 
 function isEmpt(str){
     return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
 }
 btn.addEventListener('click',function () {
+   document.getElementById('error').innerHTML="";
    document.getElementById('main1').innerHTML="";
-   var search=document.getElementById('search-key').value.toLowerCase();
+   search=document.getElementById('search-key').value.toLowerCase();
    if(search==null || isEmpt(search)){
        document.getElementById('search-key').value=null;
        alert("Oops empty search bar!");
@@ -53,21 +73,43 @@ btn.addEventListener('click',function () {
    }
 });
 
-document.getElementById("search-key")
-    .addEventListener("keyup", function(event) {
-        event.preventDefault();
-        if (event.keyCode === 13) {
-            document.getElementById("search-btn").click();
-        }
-    });
+$('#search-key').keypress(function (e) {
+   if(e.which==13){
+       $('#search-btn').click();
+       return false;
+   }
+});
+
+function linkUp() {
+    a=document.getElementsByTagName('a');
+    a[0].onclick=function (e) {
+        console.log(e.target.innerHTML);
+        document.getElementById('search-key').value=e.target.innerHTML;
+        document.getElementById('search-btn').click();
+    }
+
+
+}
 
 function useData(data) {
     obj=JSON.parse(data);
     var s="";
-    console.log(obj.resultCount);
+    var word=search.split(" ");
+    if(obj.resultCount==0){
+        var temp="";
+        for(i=0;i<word.length;i++){
+            abc=didYouMean(word[i],words);
+            // if(abc==null)
+            //     temp+=word[i]+" ";
+            // else
+                temp+=abc+" ";
+        }
+        var link="Did you mean "+"<a href='#'>"+temp+"</a>? ";
+        document.getElementById('error').innerHTML=link;
+        linkUp();
+    }
     if(age.min>=18 || age.max>=21) {
         for (i = 0; i < 25; i++) {
-            console.log(obj.results[i].trackName);
             s += "<div class='col-sm-4 col-xs-12 panel panel-default' style='height: 92px !important;'>" +
                     "<div class='panel-body'>" +
                         "<div class='row'>" +
@@ -85,7 +127,6 @@ function useData(data) {
         }
     }else{
         for (i = 0; i < 25; i++) {
-            console.log(obj.results[i].trackName);
             s += "<div class='col-sm-4  col-xs-12 panel panel-default' style='height: 120px !important;'>" +
                 "<div class='panel-body'>" +
                 "<div class='row'>" +
@@ -110,9 +151,8 @@ function useData(data) {
 function prop() {
     var buttons = document.getElementsByClassName('panel-body');
     var buttonsCount = buttons.length;
-    for (var i = 0; i <= buttonsCount; i += 1) {
+    for (var i = 0; i < buttonsCount; i += 1) {
         buttons[i].onclick = function(e) {
-            console.log(e.target.id);
             var s="<div class='text-center'>" +
                         "<div class='text-right'>" +
                         "<button>X</button>" +
@@ -131,8 +171,4 @@ function prop() {
             });
         };
     }
-}
-
-function playit(event) {
-
 }

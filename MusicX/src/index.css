@@ -4,8 +4,19 @@ body{
     overflow-x: hidden;
     /*background-position: center;*/
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
+#error{
+
+    margin-top: 2px !important;
+    color: whitesmoke;
+    font-size: x-large;
+    margin-left: 10px;
+}
+#error a{
+    color: #ff1e0d !important;
+}
+
 #myModal{
     display: none;
     background-color: whitesmoke;
