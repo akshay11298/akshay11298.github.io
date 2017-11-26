@@ -123,10 +123,21 @@ h6{
     z-index: 10;
 }
 
+.header1 img {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.header1 h1 {
+    position: relative;
+    left: 10px;
+}
+
 #logo{
     padding-top: 5px !important;
-    height:50%;
-    width: 80%;
+    height:10%;
+    width: 10%;
 }
 
 @media only screen and (max-device-width: 400px) {
