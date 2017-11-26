@@ -1,5 +1,7 @@
 body{
     background-image: url("../img/1.jpg");
+    -webkit-background-image: url("../img/1.jpg") ;
+    -webkit-background-size: cover;
     height: 100%;
     overflow-x: hidden;
     /*background-position: center;*/
@@ -7,11 +9,11 @@ body{
     background-repeat: repeat;
 }
 #error{
-
     margin-top: 2px !important;
     color: whitesmoke;
     font-size: x-large;
     margin-left: 10px;
+    -webkit-margin-before: 10px;
 }
 #error a{
     color: #ff1e0d !important;
@@ -21,7 +23,9 @@ body{
     display: none;
     background-color: whitesmoke;
     border-radius: 5px;
+    -webkit-border-radius: 5px;
     box-shadow: 0 0 25px 5px grey;
+    -webkit-box-shadow: 0 0 25px 5px grey;
     width: 500px;
     height: 100px;
 }
@@ -81,15 +85,19 @@ body{
     /*top:50%;*/
     left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     width: 350px!important;
     border-radius: 5px;
+    -webkit-border-radius: 5px;
     border-width: 5px;
     filter:none;
+    -webkit-filter: none;
 }
 
 
 #search-key{
     margin-left: 10px !important;
+    -webkit-margin-before: 10px !important;
     width:100%;
     font-size: large;
     background-color: whitesmoke;
@@ -113,4 +121,16 @@ h6{
 }
 #form{
     z-index: 10;
+}
+
+#logo{
+    height:80%;
+    width: 80%;
+}
+
+@media only screen and (min-device-width: 400px) {
+    #logo{
+        width: 1% !important; ;
+        height: 1% !important;
+    }
 }
