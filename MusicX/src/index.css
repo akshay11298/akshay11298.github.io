@@ -125,8 +125,8 @@ h6{
 
 .header1 img {
     float: left;
-    width: 100px;
-    height: 100px;
+    /*width: 100px;*/
+    /*height: 100px;*/
 }
 
 .header1 h1 {
@@ -142,7 +142,7 @@ h6{
 
 @media only screen and (max-device-width: 400px) {
     #logo{
-        width: 5% !important; ;
-        height: 8% !important;
+        width: 10% !important; ;
+        height: 16% !important;
     }
 }
