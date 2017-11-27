@@ -149,5 +149,12 @@ h6{
     }
     #search-key{
         margin-left: 0px !important;
+        width: auto;
+    }
+    body{
+        width: auto;
+    }
+    #search-btn{
+        width: auto;
     }
 }
