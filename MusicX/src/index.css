@@ -1,3 +1,6 @@
+html{
+    overflow-x:hidden;
+}
 body{
     background-image: url("../img/1.jpg");
     -webkit-background-image: url("../img/1.jpg") ;
@@ -140,23 +143,19 @@ h6{
     width: 10%;
 }
 
-@media only screen and (max-device-width: 400px) {
-    #logo{
+@media only screen and (max-device-width: 767px) {
+    #logo {
         float: left;
         padding-top: 5px !important;
-        width: 10% !important; ;
+        width: 10% !important;;
         height: 16% !important;
     }
-    #search-key{
-        /*margin-left: 2px !important;*/
-        width: auto;
-
-    }
-    body{
-        width: auto;
-    }
     #search-btn{
-        /*margin-left: 2px !important;*/
-        width: auto;
+        width: 80%;
+        margin-left:12%;
+    }
+    #search-key{
+        margin-left: 2px !important;
+        width: 97.5%;
     }
 }
