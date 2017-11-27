@@ -184,7 +184,3 @@ function heightSet() {
     for(i=0;i<ag.length;i++)
         ag[i].setAttribute('style','height:'+max+'px !important');
 }
-
-navigator.serviceWorker && navigator.serviceWorker.register('pwa.js').then(function(registration) {
-    console.log('Excellent, registered with scope: ', registration.scope);
-});
