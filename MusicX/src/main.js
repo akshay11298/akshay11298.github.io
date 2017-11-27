@@ -6,8 +6,6 @@ var obj,search;
 var words=[];
 $(document).ready(function (e) {
    getWords();
-   console.log(words);
-    writeWords(["abc","def"]);
 });
 function getWords() {
     var rawFile = new XMLHttpRequest();
@@ -23,8 +21,8 @@ function getWords() {
     rawFile.send(null);
 }
 
-function isEmpt(str){
-    return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
+function isEmpt(str) {
+    return !str.replace(/^\s+/g, '').length;
 }
 btn.addEventListener('click',function () {
    document.getElementById('error').innerHTML="";
@@ -87,8 +85,6 @@ function linkUp() {
         document.getElementById('search-key').value=e.target.innerHTML;
         document.getElementById('search-btn').click();
     }
-
-
 }
 
 function useData(data) {
@@ -99,12 +95,16 @@ function useData(data) {
         var temp="";
         for(i=0;i<word.length;i++){
             abc=didYouMean(word[i],words);
-            // if(abc==null)
-            //     temp+=word[i]+" ";
-            // else
+            if(abc==null)
+                temp+=word[i]+" ";
+            else
                 temp+=abc+" ";
         }
-        var link="Did you mean "+"<a href='#'>"+temp+"</a>? ";
+        var link;
+        if(temp===search)
+            link='Sorry no suggestion and result';
+        else
+            link="Did you mean "+"<a href='#'>"+temp+"</a>? ";
         document.getElementById('error').innerHTML=link;
         linkUp();
     }
@@ -113,7 +113,7 @@ function useData(data) {
             s += "<div class='col-sm-4 col-xs-12 panel panel-default'>" +
                     "<div class='panel-body'>" +
                         "<div class='row'>" +
-                            "<div class='col-sm-3'>" +
+                            "<div class='col-sm-3 pull-left'>" +
                                 "<img id="+i+ " src=" + obj.results[i].artworkUrl100 + " class='img-responsive' width='60px' height='60px' data-target='#myModal'>" +
                             "</div>" +
                             "<div class='col-sm-9'>" +
@@ -130,7 +130,7 @@ function useData(data) {
             s += "<div class='col-sm-4  col-xs-12 panel panel-default'>" +
                 "<div class='panel-body'>" +
                 "<div class='row'>" +
-                "<div class='col-sm-3'>" +
+                "<div class='col-sm-3 pull-left'>" +
                 "<img src=" + obj.results[i].artworkUrl100 + " class='img-responsive' width='60px' height='60px' data-target='#myModal'>" +
                 "</div>" +
                 "<div class='col-sm-9'>" +
