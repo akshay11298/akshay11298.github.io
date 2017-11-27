@@ -148,13 +148,15 @@ h6{
         height: 16% !important;
     }
     #search-key{
-        margin-left: 2px !important;
+        /*margin-left: 2px !important;*/
+        width: auto;
 
     }
     body{
         width: auto;
     }
     #search-btn{
-        margin-left: 2px !important;
+        /*margin-left: 2px !important;*/
+        width: auto;
     }
 }
