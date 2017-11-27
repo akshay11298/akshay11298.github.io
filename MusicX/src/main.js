@@ -110,7 +110,7 @@ function useData(data) {
     }
     if(age.min>=18 || age.max>=21) {
         for (i = 0; i < 25; i++) {
-            s += "<div class='col-sm-4 col-xs-12 panel panel-default' style='height: 92px !important;'>" +
+            s += "<div class='col-sm-4 col-xs-12 panel panel-default'>" +
                     "<div class='panel-body'>" +
                         "<div class='row'>" +
                             "<div class='col-sm-3'>" +
@@ -127,7 +127,7 @@ function useData(data) {
         }
     }else{
         for (i = 0; i < 25; i++) {
-            s += "<div class='col-sm-4  col-xs-12 panel panel-default' style='height: 120px !important;'>" +
+            s += "<div class='col-sm-4  col-xs-12 panel panel-default'>" +
                 "<div class='panel-body'>" +
                 "<div class='row'>" +
                 "<div class='col-sm-3'>" +
@@ -145,6 +145,7 @@ function useData(data) {
     }
     document.getElementById('main1').innerHTML+=s;
     prop();
+    heightSet();
 }
 
 
@@ -171,4 +172,15 @@ function prop() {
             });
         };
     }
+}
+var ag=[];
+function heightSet() {
+    max=-1;
+    ag = document.getElementsByClassName('panel-default');
+    for (i = 0; i < ag.length; i++) {
+        if(ag[i].clientHeight>max)
+            max=ag[i].clientHeight;
+    }
+    for(i=0;i<ag.length;i++)
+        ag[i].setAttribute('style','height:'+max+'px !important');
 }
