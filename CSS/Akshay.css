@@ -123,6 +123,9 @@ div.jumbotron{
     height: 200px !important;
     width: 200px !important;
 }
+.sp img{
+    width: 100px !important;
+}
 .fa-facebook-official{
     color: #3b5998;
 

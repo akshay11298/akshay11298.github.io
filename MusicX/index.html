@@ -52,12 +52,12 @@
           <div id="logout" class="text-right col-sm-6"></div>
       </div>
       <div id="field" class="row">
-          <form class='form-inline'>
+          <form class='form-inline' method="post">
               <div class='form-group col-sm-8'>
                   <input type='text' id='search-key' class="form-control glyphicon" placeholder="&#xe003; Search">
               </div>
               <div class='form-group'>
-                  <input type="button" class="form-control" id="search-btn" value="Go">
+                  <input type="button" class="form-control" id="search-btn" name="search-btn" value="Go">
               </div>
           </form>
       </div>
@@ -104,15 +104,17 @@
 
       function logout(){
           FB.logout(function (response) {
+              document.getElementById('main1').innerHTML="";
+              document.getElementById('search-key').value=null;
              document.getElementById('form').setAttribute('class','fluid-container animate bounceInDown');
              document.getElementById('form').setAttribute('style','display:block');
               document.getElementsByClassName('panel panel-default col-sm-6 text-center')[0].innerHTML ='<input type="button" class="btn btn-primary" value="Login" id="login" onclick="login()">';
               document.getElementById('logout').setAttribute('style','displaly:none');
               document.getElementById('welcome').innerHTML='Welcome';
-              document.getElementById('main1').innerHTML="";
-              document.getElementById('search-key').value=null;
+
           });
           document.getElementById('main').setAttribute('style','filter:blur(5px);-webkit-filter:(5px)');
+          document.getElementById('main1').setAttribute('style','filter:blur(5px);-webkit-filter:(5px)');
       }
 
       function fadeOut(a) {
@@ -135,6 +137,7 @@
                   document.getElementsByClassName('panel panel-default col-sm-6 text-center')[0].innerHTML = '<strong>You are connected</strong>';
                   fadeOut('fluid-container');
                   document.getElementById('main').setAttribute('style','filter:none;-webkit-filter:none;');
+                  document.getElementById('main1').setAttribute('style','filter:none;-webkit-filter:none;');
               } else if (response.status === 'not_authorized') {
                   document.getElementById('status').innerHTML = "Not connected";
               } else {

@@ -101,7 +101,7 @@ function useData(data) {
                 temp+=abc+" ";
         }
         var link;
-        if(temp===search)
+        if(temp.trim()===search)
             link='Sorry no suggestion and result';
         else
             link="Did you mean "+"<a href='#'>"+temp+"</a>? ";

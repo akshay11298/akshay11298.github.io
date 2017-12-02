@@ -97,6 +97,14 @@ body{
     -webkit-filter: none;
 }
 
+img{
+    position: relative;
+    z-index: 1;
+}
+
+img:hover{
+    cursor: pointer;
+}
 
 #search-key{
     margin-left: 10px !important;
